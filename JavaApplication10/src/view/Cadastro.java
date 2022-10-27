@@ -277,6 +277,8 @@ public class Cadastro extends javax.swing.JFrame {
         if(senha == null ? senhaconfirm != null : !senha.equals(senhaconfirm)){
             JOptionPane.showMessageDialog(null,"As senhas não correspondem!");
         }
+        
+        
 //        String cre = txtcre.getText();
 //        
 //        Usuario usuarioInicial = new Usuario(nome, email, senha, cre);

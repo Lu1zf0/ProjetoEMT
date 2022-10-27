@@ -12,6 +12,7 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -244,7 +245,13 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jbvoltar2ActionPerformed
 
     private void jbEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEntrarActionPerformed
-        // TODO add your handling code here:
+        String senha = txtEmail.getText(), email = txtSenha.getText();
+
+        if(email.equalsIgnoreCase("Admin") && senha.equals(1234)){
+            JOptionPane.showMessageDialog(null,"Logado!");
+        }else{
+            JOptionPane.showMessageDialog(null,"Eamail e senha não cadastrados");
+        }
     }//GEN-LAST:event_jbEntrarActionPerformed
 
     /**

@@ -126,7 +126,7 @@ public class DadosFuncionario extends javax.swing.JFrame {
         jButton2.setText("2");
         jButton2.setBorder(null);
         jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -138,7 +138,7 @@ public class DadosFuncionario extends javax.swing.JFrame {
         jbSair3.setText("X");
         jbSair3.setBorder(null);
         jbSair3.setContentAreaFilled(false);
-        jbSair3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbSair3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jbSair3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbSair3ActionPerformed(evt);
