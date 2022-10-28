@@ -247,10 +247,13 @@ public class Login extends javax.swing.JFrame {
     private void jbEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEntrarActionPerformed
         String senha = txtEmail.getText(), email = txtSenha.getText();
 
-        if(email.equalsIgnoreCase("Admin") && senha.equals(1234)){
+        if( email == "Admin" && senha == "1234"){
             JOptionPane.showMessageDialog(null,"Logado!");
+           
         }else{
-            JOptionPane.showMessageDialog(null,"Eamail e senha não cadastrados");
+            JOptionPane.showMessageDialog(null,"Email e senha não cadastrados");
+             FuncionáriosTabela FT = new FuncionáriosTabela();
+            FT.setVisible(true);
         }
     }//GEN-LAST:event_jbEntrarActionPerformed
 
