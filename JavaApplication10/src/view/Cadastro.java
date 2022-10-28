@@ -31,16 +31,16 @@ public class Cadastro extends javax.swing.JFrame {
      */
     public Cadastro() {
         initComponents();
-        txtEmailCadastro.setBackground(new java.awt.Color(0,0,0,1));
-        txtEmailCadastro.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
+        txtEmail.setBackground(new java.awt.Color(0,0,0,1));
+        txtEmail.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
         txtNome.setBackground(new java.awt.Color(0,0,0,1));
         txtNome.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
-        txtSenhaCadastro.setBackground(new java.awt.Color(0,0,0,1));
-        txtSenhaCadastro.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
+        txtSenha.setBackground(new java.awt.Color(0,0,0,1));
+        txtSenha.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
         txtSenhaCadastrocc.setBackground(new java.awt.Color(0,0,0,1));
         txtSenhaCadastrocc.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
-        txtcre.setBackground(new java.awt.Color(0,0,0,1));
-        txtcre.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
+        txtCRE.setBackground(new java.awt.Color(0,0,0,1));
+        txtCRE.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
     }
     
     class JPanelGradiente extends JPanel {
@@ -94,12 +94,12 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jbCadastrar = new JButtonOutline();
         txtNome = new javax.swing.JTextField();
-        txtSenhaCadastro = new javax.swing.JPasswordField();
+        txtSenha = new javax.swing.JPasswordField();
         txtSenhaCadastrocc = new javax.swing.JPasswordField();
-        txtEmailCadastro = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txtcre = new javax.swing.JTextField();
+        txtCRE = new javax.swing.JTextField();
         jbSair3 = new javax.swing.JButton();
         jbvoltar = new javax.swing.JButton();
 
@@ -136,14 +136,14 @@ public class Cadastro extends javax.swing.JFrame {
         txtNome.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         txtNome.setForeground(new java.awt.Color(255, 255, 255));
 
-        txtSenhaCadastro.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        txtSenhaCadastro.setForeground(new java.awt.Color(255, 255, 255));
+        txtSenha.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        txtSenha.setForeground(new java.awt.Color(255, 255, 255));
 
         txtSenhaCadastrocc.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         txtSenhaCadastrocc.setForeground(new java.awt.Color(255, 255, 255));
 
-        txtEmailCadastro.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        txtEmailCadastro.setForeground(new java.awt.Color(255, 255, 255));
+        txtEmail.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        txtEmail.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -153,15 +153,15 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("CRE");
 
-        txtcre.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        txtcre.setForeground(new java.awt.Color(255, 255, 255));
+        txtCRE.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        txtCRE.setForeground(new java.awt.Color(255, 255, 255));
 
         jbSair3.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jbSair3.setForeground(new java.awt.Color(255, 255, 255));
         jbSair3.setText("X");
         jbSair3.setBorder(null);
         jbSair3.setContentAreaFilled(false);
-        jbSair3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbSair3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jbSair3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbSair3ActionPerformed(evt);
@@ -171,7 +171,7 @@ public class Cadastro extends javax.swing.JFrame {
         jbvoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/setavoltar.png"))); // NOI18N
         jbvoltar.setBorder(null);
         jbvoltar.setContentAreaFilled(false);
-        jbvoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbvoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jbvoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbvoltarActionPerformed(evt);
@@ -189,8 +189,8 @@ public class Cadastro extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtSenhaCadastro, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtEmailCadastro)
+                                .addComponent(txtSenha, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtEmail)
                                 .addComponent(txtNome, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -200,7 +200,7 @@ public class Cadastro extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addComponent(jLabel5)
                             .addComponent(txtSenhaCadastrocc)
-                            .addComponent(txtcre, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE))
+                            .addComponent(txtCRE, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(157, 157, 157)
@@ -233,11 +233,11 @@ public class Cadastro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtEmailCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtSenhaCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -245,7 +245,7 @@ public class Cadastro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtcre, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtCRE, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
                 .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
@@ -267,29 +267,22 @@ public class Cadastro extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    Usuario User = new Usuario();
+    Banco Bank = new Banco();
     private void jbCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarActionPerformed
+       User.setNome(txtNome.getText());
+       User.setEmail(txtEmail.getText());
+       User.setSenha(txtSenha.getText());
+       User.setCRE(Integer.parseInt(txtCRE.getText()));
        
-        String nome = txtNome.getText();
-        String email = txtEmailCadastro.getText();
-        String senha = txtSenhaCadastro.getText();
-        String senhaconfirm = txtSenhaCadastrocc.getText();
-        if(senha == null ? senhaconfirm != null : !senha.equals(senhaconfirm)){
-            JOptionPane.showMessageDialog(null,"As senhas não correspondem!");
-        }
-        
-        
-//        String cre = txtcre.getText();
-//        
-//        Usuario usuarioInicial = new Usuario(nome, email, senha, cre);
-//        
-//        try {
-//            Connection conexao = new FazerConexao().conector();
-//            UsuarioDAO usuarioDao = new UsuarioDAO(conexao);
-//            usuarioDao.insert(usuarioInicial);
-//            
-//        } catch (SQLException e) {
-//        }
+       Bank.i++;
+       Bank.Guardar(User.getNome(), User.getEmail(), User.getSenha(), User.getCRE());
+       
+        txtNome.setText("");
+        txtEmail.setText("");
+        txtSenha.setText("");
+        txtCRE.setText("");
     }//GEN-LAST:event_jbCadastrarActionPerformed
 
     private void jbSair3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair3ActionPerformed
@@ -345,10 +338,10 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JButton jbCadastrar;
     private javax.swing.JButton jbSair3;
     private javax.swing.JButton jbvoltar;
-    private javax.swing.JTextField txtEmailCadastro;
+    private javax.swing.JTextField txtCRE;
+    private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNome;
-    private javax.swing.JPasswordField txtSenhaCadastro;
+    private javax.swing.JPasswordField txtSenha;
     private javax.swing.JPasswordField txtSenhaCadastrocc;
-    private javax.swing.JTextField txtcre;
     // End of variables declaration//GEN-END:variables
 }

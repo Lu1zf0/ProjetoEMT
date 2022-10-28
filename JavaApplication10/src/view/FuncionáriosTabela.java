@@ -75,7 +75,7 @@ public class FuncionáriosTabela extends javax.swing.JFrame {
         jbSair3.setText("X");
         jbSair3.setBorder(null);
         jbSair3.setContentAreaFilled(false);
-        jbSair3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbSair3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jbSair3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbSair3ActionPerformed(evt);
@@ -135,6 +135,11 @@ public class FuncionáriosTabela extends javax.swing.JFrame {
         jLabel12.setText("8 - Bruna Oliveira");
 
         jButton3.setText("✓");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("✓");
 
@@ -265,7 +270,11 @@ public class FuncionáriosTabela extends javax.swing.JFrame {
     private void jbSair3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair3ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jbSair3ActionPerformed
+    
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+      
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
