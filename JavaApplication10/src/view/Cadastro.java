@@ -35,8 +35,8 @@ public class Cadastro extends javax.swing.JFrame {
             int width = getWidth();
             int height = getHeight();
             
-            Color color1 = new Color(10,0,40);
-            Color color2 = new Color(57,0,90);
+            Color color1 = new Color(0,212,255);
+            Color color2 = new Color(88,230,236);
             GradientPaint gp = new GradientPaint(0,0,color1,180,height,color2);
             g2d.setPaint(gp);
             g2d.fillRect(0, 0, width, height);       
