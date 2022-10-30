@@ -1,7 +1,5 @@
 package view;
 
-import bancojava.User;
-import bancojava.Bank;
 //import dao.FazerConexao;
 //import dao.UsuarioDAO;
 import java.awt.Color;
@@ -258,25 +256,11 @@ public class Cadastro extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    
-    User User = new User();
-    Bank Bank = new Bank();
+
     private void jbCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarActionPerformed
-        User.setNome(txtNome.getText());
-        User.setEmail(txtEmail.getText());
-        User.setSenha(txtSenha.getText());
-        User.setCRE(Integer.parseInt(txtCRE.getText()));
-        //Guardanto os dados
-        Bank.Conta();
-        Bank.Guardar(User.getNome(), User.getEmail(), User.getSenha(), User.getCRE());
-        //Limpando os inputs
-        txtNome.setText("");
-        txtEmail.setText("");
-        txtSenha.setText("");
-        txtCRE.setText("");
+  
         
-        Login lg = new Login();
-        lg.setVisible(true);
+   
         
 //        Usuario perfil = new Usuario(txtNome.getText(), txtEmail.getText(),txtSenha.getText(), txtCRE.getText());  
 //        try {

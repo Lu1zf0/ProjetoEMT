@@ -290,10 +290,9 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jbvoltar2ActionPerformed
 
    
-    Bank Bank = new Bank();
+
     private void jbEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEntrarActionPerformed
-        String email = txtEmail.getText(), senha = txtSenha.getText();
-        Bank.Logar(email, senha);
+       
     }//GEN-LAST:event_jbEntrarActionPerformed
 
 
