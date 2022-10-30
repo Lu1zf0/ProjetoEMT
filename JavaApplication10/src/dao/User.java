@@ -1,5 +1,5 @@
-package view;
-public class Usuario {
+package dao;
+public class User {
     private String Nome, Email, Senha;
     private int CRE;
     

@@ -1,11 +1,16 @@
-package view;
+package dao;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Banco {
-    HashMap Map = new HashMap();// Conjunto em que cada elemento possui uma Key(chave)
-
+public class Bank {
+   HashMap Map = new HashMap();// Conjunto em que cada elemento possui uma Key(chave)
    int i = 0;
+   
+   public void Conta(){
+       this.i++;
+   }
+   
+   
    public void Guardar(String nome, String email, String senha, int cre){
        ArrayList book = new ArrayList();
        

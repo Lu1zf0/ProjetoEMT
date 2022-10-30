@@ -1,5 +1,7 @@
 package view;
 
+import dao.User;
+import dao.Bank;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.GradientPaint;
@@ -10,6 +12,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import model.Usuario;
 
 public class Cadastro extends javax.swing.JFrame {
 
@@ -47,8 +50,8 @@ public class Cadastro extends javax.swing.JFrame {
         public JButtonOutline () {
             setContentAreaFilled(false);
             setBorder(new EmptyBorder (5, 0, 5, 0));
-            setBackground(Color.WHITE);
             setCursor(new Cursor(Cursor.HAND_CURSOR));
+     
         }
 
         @Override
@@ -62,8 +65,8 @@ public class Cadastro extends javax.swing.JFrame {
 
         }
     }
+     
     
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -105,6 +108,7 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Email");
 
+        jbCadastrar.setBackground(new java.awt.Color(60, 63, 65));
         jbCadastrar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jbCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         jbCadastrar.setText("Cadastrar");
@@ -249,21 +253,23 @@ public class Cadastro extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     
-    Usuario User = new Usuario();
-    Banco Bank = new Banco();
+    User User = new User();
+    Bank Bank = new Bank();
     private void jbCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarActionPerformed
-       User.setNome(txtNome.getText());
-       User.setEmail(txtEmail.getText());
-       User.setSenha(txtSenha.getText());
-       User.setCRE(Integer.parseInt(txtCRE.getText()));
-       
-       Bank.i++;
-       Bank.Guardar(User.getNome(), User.getEmail(), User.getSenha(), User.getCRE());
-       
+        User.setNome(txtNome.getText());
+        User.setEmail(txtEmail.getText());
+        User.setSenha(txtSenha.getText());
+        User.setCRE(Integer.parseInt(txtCRE.getText()));
+        //Guardanto os dados
+        Bank.Conta();
+        Bank.Guardar(User.getNome(), User.getEmail(), User.getSenha(), User.getCRE());
+        //Limpando os inputs
         txtNome.setText("");
         txtEmail.setText("");
         txtSenha.setText("");
         txtCRE.setText("");
+        
+        Usuario perfil = new Usuario();
     }//GEN-LAST:event_jbCadastrarActionPerformed
 
     private void jbSair3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair3ActionPerformed
