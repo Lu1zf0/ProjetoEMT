@@ -1,4 +1,4 @@
-package dao;
+package JBank;
 public class User {
     private String Nome, Email, Senha;
     private int CRE;

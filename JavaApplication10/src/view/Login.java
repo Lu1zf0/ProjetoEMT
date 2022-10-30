@@ -1,5 +1,7 @@
 package view;
 
+import JBank.Bank;
+import JBank.User;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.GradientPaint;
@@ -21,32 +23,32 @@ public class Login extends javax.swing.JFrame {
         PreparedStatement pst = null;
         ResultSet rs = null;
         
-        public void Logar (){
-            //Pesquisar em 'Usuarios' termos que satisfassam a condição que está após 'where'
-            String sql = "select * from usuarios where login=? and senha=?"; 
-            
-            try {
-                //Consulta o Banco
-                pst = conexao.prepareStatement(sql);
-                pst.setString(1, txtEmail.getText());
-                pst.setString(2, txtSenha.getText());
-                // acessar Query
-                rs = pst.executeQuery();
-                // se exixti usuário e senha correspondente
-                if(rs.next()){
-                      FuncionáriosTabela FT = new FuncionáriosTabela();
-                      FT.setVisible(true);
-                }else{
-                    JOptionPane.showMessageDialog(null,"INVALIDOS");
-                }
-                        
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, e);
-                
-            }
-            
-            
-        }
+//        public void Logar (){
+//            //Pesquisar em 'Usuarios' termos que satisfassam a condição que está após 'where'
+//            String sql = "select * from usuarios where login=? and senha=?"; 
+//            
+//            try {
+//                //Consulta o Banco
+//                pst = conexao.prepareStatement(sql);
+//                pst.setString(1, txtEmail.getText());
+//                pst.setString(2, txtSenha.getText());
+//                // acessar Query
+//                rs = pst.executeQuery();
+//                // se exixti usuário e senha correspondente
+//                if(rs.next()){
+//                      FuncionáriosTabela FT = new FuncionáriosTabela();
+//                      FT.setVisible(true);
+//                }else{
+//                    JOptionPane.showMessageDialog(null,"INVALIDOS");
+//                }
+//                        
+//            } catch (Exception e) {
+//                JOptionPane.showMessageDialog(null, e);
+//                
+//            }
+//            
+//            
+//        }
     
     
        public Login() {
@@ -161,7 +163,7 @@ public class Login extends javax.swing.JFrame {
         jbSair2.setText("X");
         jbSair2.setBorder(null);
         jbSair2.setContentAreaFilled(false);
-        jbSair2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbSair2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jbSair2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbSair2ActionPerformed(evt);
@@ -171,7 +173,7 @@ public class Login extends javax.swing.JFrame {
         jbvoltar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/setavoltar.png"))); // NOI18N
         jbvoltar2.setBorder(null);
         jbvoltar2.setContentAreaFilled(false);
-        jbvoltar2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbvoltar2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jbvoltar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbvoltar2ActionPerformed(evt);
@@ -204,10 +206,11 @@ public class Login extends javax.swing.JFrame {
                         .addGap(48, 48, 48))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jbSair2)
-                        .addGap(15, 15, 15))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jbvoltar2)
-                        .addContainerGap())))
+                        .addGap(15, 15, 15))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbvoltar2)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -266,8 +269,11 @@ public class Login extends javax.swing.JFrame {
        dispose();
     }//GEN-LAST:event_jbvoltar2ActionPerformed
 
+   
+    Bank Bank = new Bank();
     private void jbEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEntrarActionPerformed
-        Logar(); 
+        String email = txtEmail.getText(), senha = txtSenha.getText();
+        Bank.Logar(email, senha);
     }//GEN-LAST:event_jbEntrarActionPerformed
 
 

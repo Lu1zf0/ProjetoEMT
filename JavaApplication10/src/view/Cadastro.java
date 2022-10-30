@@ -1,18 +1,21 @@
 package view;
 
-import dao.User;
-import dao.Bank;
+import JBank.User;
+import JBank.Bank;
+//import dao.FazerConexao;
+//import dao.UsuarioDAO;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+//import java.sql.Connection;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import model.Usuario;
+//import model.Usuario;
 
 public class Cadastro extends javax.swing.JFrame {
 
@@ -38,8 +41,8 @@ public class Cadastro extends javax.swing.JFrame {
             int width = getWidth();
             int height = getHeight();
             
-            Color color1 = new Color(0,212,255);
-            Color color2 = new Color(88,230,236);
+            Color color1 = new Color(10,0,40);
+            Color color2 = new Color(57,0,90);
             GradientPaint gp = new GradientPaint(0,0,color1,180,height,color2);
             g2d.setPaint(gp);
             g2d.fillRect(0, 0, width, height);       
@@ -269,7 +272,18 @@ public class Cadastro extends javax.swing.JFrame {
         txtSenha.setText("");
         txtCRE.setText("");
         
-        Usuario perfil = new Usuario();
+        Login lg = new Login();
+        lg.setVisible(true);
+        
+//        Usuario perfil = new Usuario(txtNome.getText(), txtEmail.getText(),txtSenha.getText(), txtCRE.getText());  
+//        try {
+//            Connection conexao = new FazerConexao().conector();
+//            UsuarioDAO usuarioDao = new UsuarioDAO(conexao);
+//            usuarioDao.insert(perfil);
+//        } catch (Exception e) {
+//            
+//        }
+        
     }//GEN-LAST:event_jbCadastrarActionPerformed
 
     private void jbSair3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSair3ActionPerformed
