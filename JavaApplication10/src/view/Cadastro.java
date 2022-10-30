@@ -1,7 +1,7 @@
 package view;
 
-import JBank.User;
-import JBank.Bank;
+import bancojava.User;
+import bancojava.Bank;
 //import dao.FazerConexao;
 //import dao.UsuarioDAO;
 import java.awt.Color;
@@ -11,7 +11,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 //import java.sql.Connection;
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -22,16 +21,8 @@ public class Cadastro extends javax.swing.JFrame {
 
     public Cadastro() {
         initComponents();
-        txtEmail.setBackground(new java.awt.Color(0,0,0,1));
-        txtEmail.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
-        txtNome.setBackground(new java.awt.Color(0,0,0,1));
-        txtNome.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
-        txtSenha.setBackground(new java.awt.Color(0,0,0,1));
-        txtSenha.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
-        txtSenhaCadastrocc.setBackground(new java.awt.Color(0,0,0,1));
-        txtSenhaCadastrocc.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
-        txtCRE.setBackground(new java.awt.Color(0,0,0,1));
-        txtCRE.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.white));
+        Color color3 = new Color(69,176,232);
+        jPanel2.setBackground(color3);
     }
     
     class JPanelGradiente extends JPanel {
@@ -40,9 +31,8 @@ public class Cadastro extends javax.swing.JFrame {
             Graphics2D g2d = (Graphics2D) g;
             int width = getWidth();
             int height = getHeight();
-            
-            Color color1 = new Color(10,0,40);
-            Color color2 = new Color(57,0,90);
+            Color color1 = new Color(88,230,236);
+            Color color2 = new Color(99,75,237);
             GradientPaint gp = new GradientPaint(0,0,color1,180,height,color2);
             g2d.setPaint(gp);
             g2d.fillRect(0, 0, width, height);       
@@ -75,7 +65,6 @@ public class Cadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new JPanelGradiente();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -87,17 +76,15 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txtCRE = new javax.swing.JTextField();
-        jbSair3 = new javax.swing.JButton();
         jbvoltar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jbSair3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
-
-        jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Cadastro");
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -122,16 +109,16 @@ public class Cadastro extends javax.swing.JFrame {
         });
 
         txtNome.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        txtNome.setForeground(new java.awt.Color(255, 255, 255));
+        txtNome.setBorder(null);
 
         txtSenha.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        txtSenha.setForeground(new java.awt.Color(255, 255, 255));
+        txtSenha.setBorder(null);
 
         txtSenhaCadastrocc.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        txtSenhaCadastrocc.setForeground(new java.awt.Color(255, 255, 255));
+        txtSenhaCadastrocc.setBorder(null);
 
         txtEmail.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        txtEmail.setForeground(new java.awt.Color(255, 255, 255));
+        txtEmail.setBorder(null);
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -142,19 +129,7 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel6.setText("CRE");
 
         txtCRE.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        txtCRE.setForeground(new java.awt.Color(255, 255, 255));
-
-        jbSair3.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        jbSair3.setForeground(new java.awt.Color(255, 255, 255));
-        jbSair3.setText("X");
-        jbSair3.setBorder(null);
-        jbSair3.setContentAreaFilled(false);
-        jbSair3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jbSair3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbSair3ActionPerformed(evt);
-            }
-        });
+        txtCRE.setBorder(null);
 
         jbvoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/setavoltar.png"))); // NOI18N
         jbvoltar.setBorder(null);
@@ -165,6 +140,42 @@ public class Cadastro extends javax.swing.JFrame {
                 jbvoltarActionPerformed(evt);
             }
         });
+
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Cadastro");
+
+        jbSair3.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jbSair3.setForeground(new java.awt.Color(255, 255, 255));
+        jbSair3.setText("X");
+        jbSair3.setBorder(null);
+        jbSair3.setContentAreaFilled(false);
+        jbSair3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbSair3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSair3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(152, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(119, 119, 119)
+                .addComponent(jbSair3)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jbSair3))
+                .addGap(0, 6, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -191,30 +202,22 @@ public class Cadastro extends javax.swing.JFrame {
                             .addComponent(txtCRE, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(157, 157, 157)
-                .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(151, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(144, 144, 144))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jbSair3)
-                        .addGap(15, 15, 15))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jbvoltar)
-                        .addContainerGap())))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbvoltar))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jbSair3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
-                .addGap(56, 56, 56)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(93, 93, 93)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -236,7 +239,7 @@ public class Cadastro extends javax.swing.JFrame {
                 .addComponent(txtCRE, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
                 .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(jbvoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -313,6 +316,7 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JButton jbCadastrar;
     private javax.swing.JButton jbSair3;
     private javax.swing.JButton jbvoltar;

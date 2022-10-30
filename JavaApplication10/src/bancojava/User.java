@@ -1,4 +1,4 @@
-package JBank;
+package bancojava;
 public class User {
     private String Nome, Email, Senha;
     private int CRE;
